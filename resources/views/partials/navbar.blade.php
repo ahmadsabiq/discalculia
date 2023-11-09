@@ -1,18 +1,45 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
-      <a class="navbar-brand" href="/">Navbar</a>
+      <a class="navbar-brand" href="/">Calculico</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" aria-current="page" href="/">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link {{ ($title === "Dashboard") ? 'active' : '' }}" href="/dashboard">Dashboard</a>
-          </li>
+          {{-- <li class="nav-item ms-auto">
+            <a class="nav-link {{ ($title === "WebGL") ? 'active' : '' }}" href="/webgl">WebGL</a>
+          </li> --}}
         </ul>
+
+        <ul class="navbar-nav ms-auto">
+              @auth
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Welcome back, {{ auth()->user()->name }}
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse"></i>
+                     My Dashbord</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <form action="/logout" method="POST">
+                      @csrf
+                      
+                      <button type="submit" class="dropdown-item">Logout <i class="bi bi-box-arrow-right"></i></button></form>
+                  </li>
+                </ul>
+              </li>
+                @else
+              <li class="nav-item">
+                <a class="nav-link {{ ($title === "Login") ? 'active' : '' }}" href="/login">Login<i class="bi bi-box-arrow-in-right"></i>
+                </a>
+              </li>
+              @endauth
+            </ul>
+        
       </div>
     </div>
   </nav>
