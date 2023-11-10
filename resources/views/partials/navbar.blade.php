@@ -9,9 +9,9 @@
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" aria-current="page" href="/">Home</a>
           </li>
-          {{-- <li class="nav-item ms-auto">
+          <li class="nav-item ms-auto">
             <a class="nav-link {{ ($title === "WebGL") ? 'active' : '' }}" href="/webgl">WebGL</a>
-          </li> --}}
+          </li>
         </ul>
 
         <ul class="navbar-nav ms-auto">

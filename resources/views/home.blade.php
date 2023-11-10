@@ -11,7 +11,7 @@
           </div>
           <div class="col-lg-6">
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Selamat Datang di Calculico</h1>
-            <p class="lead">Tempat belajar-mengajar untuk anak usia pra-sekolah dengan risiko Diskalkulia</p>
+            <p class="lead">Aplikasi belajar-mengajar untuk anak usia pra-sekolah dengan risiko Diskalkulia</p>
           </div>
         </div>
     </div>
@@ -33,7 +33,7 @@
               </div> --}}
           </div>
           <div class="col d-flex align-items-start">
-            <img src="/img/indigrow.png" class="d-block mx-lg-auto img-fluid"  loading="lazy">
+            <img src="/img/logo-adi.png" class="d-block mx-lg-auto img-fluid"  width="200" height="100" loading="lazy">
             {{-- <div class="ms-4">
                 <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Indigrow Child Development</h3>
               </div> --}}
