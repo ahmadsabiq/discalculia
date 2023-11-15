@@ -52,4 +52,4 @@ Route::resource('dashboard/laporan', DashboardReportController::class)->middlewa
 
 
 // Admininstrator
-Route::resource('dashboard/user', AdminUserController::class)->middleware('auth');
+Route::resource('dashboard/user', AdminUserController::class)->middleware('admin');
