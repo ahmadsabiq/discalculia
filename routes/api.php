@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// routes/api.php
+
+Route::middleware('auth:api')->group(function () {
+    Route::get('/user', 'ApiController@getUser');
+    // Add more routes for game-related actions
+});
+

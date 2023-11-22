@@ -9,6 +9,9 @@
         <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ $user->name }}">
       </div>
       <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">Tanggal Lahir</label>
+        <input type="date" id="disabledTextInput" class="form-control" placeholder="{{ $user->dob }}">
+      <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Username</label>
         <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ $user->username }}">
       </div>

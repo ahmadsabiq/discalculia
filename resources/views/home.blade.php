@@ -46,7 +46,7 @@
 <div class="px-4 pt-5 my-5 text-center border-top">
     <h1 class="display-4 fw-bold text-body-emphasis">APA ITU CALCULICO?</h1>
     <div class="col-lg-9 mx-auto">
-      <p class="mb-4 fs-16px">Calculico adalah alat bantu belajar-mengajar numerasi berbasis web untuk anak usia pra-sekolah dengan risiko diskalkulia. Di dalam website ini akan disuguhkan materi-materi numerasi dari dasar seperti pengenalan angka hingga anak tidak merasa kesulitan saat dihadapkan dengan angka dan matematika. Kami berharap web ini memudahkan para pendamping/orangtua dan melengkapi aplikasi yang sudah ada.</p>
+      <p class="mb-4 fs-22px">Calculico adalah alat bantu belajar-mengajar numerasi berbasis web untuk anak usia pra-sekolah dengan risiko diskalkulia. Di dalam website ini akan disuguhkan materi-materi numerasi dari dasar seperti pengenalan angka hingga anak tidak merasa kesulitan saat dihadapkan dengan angka dan matematika. Kami berharap web ini memudahkan para pendamping/orangtua dan melengkapi aplikasi yang sudah ada.</p>
     </div>
     <div class="row align-items-center">
       <div class="container px-5">
@@ -61,6 +61,7 @@
       <div class="col-lg-7 text-center text-lg-start">
         <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Mulai Sekarang</h1>
         <p class="col-lg-10 fs-4">Login terlebih dahulu di sini, apabila belum memiliki akun klik tombol register di bawah ini</p>
+        <button type="button" onclick="location.href='/register'" class="btn btn-primary mb-4">Register</button>
       </div>
       <div class="col-md-10 mx-auto col-lg-5">
         @if(session('success'))

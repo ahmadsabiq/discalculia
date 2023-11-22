@@ -47,6 +47,27 @@ class AdminUserController extends Controller
         ]);
     }
 
+    // List all pending registrations
+    public function showPendingRegistrations()
+    {
+        $pendingUsers = User::where('approved', false)->get();
+        return view('admin.users.pending', compact('pendingUsers'));
+    }
+
+    // Approve a user
+    public function approveUser($userId)
+    {
+        $user = User::find($userId);
+
+        if ($user) {
+            $user->approved = true;
+            $user->save();
+        }
+
+        return redirect()->route('admin.pending.users');
+    }
+
+
     /**
      * Show the form for editing the specified resource.
      */

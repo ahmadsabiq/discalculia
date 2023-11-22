@@ -29,7 +29,9 @@ Route::get('/webgl', function () {
     return view('index', [
         
     ]);
-});
+})->name('webgl')->middleware('auth');
+
+Route::get('/sepatu', 'GameController@index')->name('sepatu')->middleware('auth');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);

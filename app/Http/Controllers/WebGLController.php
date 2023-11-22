@@ -6,6 +6,9 @@ class WebGLController extends Controller
 {
     public function index()
     {
-        return view('webgl.index');
+        return view('webgl.index', [
+            "title" => "WebGL",
+            "active" => "webgl"
+        ]);
     }
 }
