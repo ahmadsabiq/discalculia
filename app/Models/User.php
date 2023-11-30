@@ -19,6 +19,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'gender',
         'dob',
         'username',
         'email',
@@ -49,4 +50,13 @@ class User extends Authenticatable
     {
         return 'username';
     }
+
+    // public function update(array $attributes = [], array $options = [])
+    // {
+    //     if (isset($attributes['password'])) {
+    //         $attributes['password'] = bcrypt($attributes['password']);
+    //     }
+    //     return parent::update($attributes, $options);
+    // }
+    
 }

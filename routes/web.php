@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\AdminUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\DashboardBioController;
-use App\Http\Controllers\DashboardWebglController;
+use App\Http\Controllers\ChangePasswordController;
+use App\Http\Controllers\DashboardModuleController;
 use App\Http\Controllers\DashboardReportController;
 
 /*
@@ -41,6 +42,9 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
+Route::get('/dashboard/ganti-password', [ChangePasswordController::class, 'index'])->middleware('auth');
+Route::post('/dashboard/ganti-password', [ChangePasswordController::class, 'change'])->middleware('auth');
+
 Route::get('/dashboard', function(){
     return view('dashboard.index', [
         "title" => "Dashboard",
@@ -48,8 +52,8 @@ Route::get('/dashboard', function(){
     ]);
 })->middleware('auth');
 
-Route::resource('dashboard/biodata', DashboardBioController::class)->middleware('auth');
-Route::resource('dashboard/latihan', DashboardWebglController::class)->middleware('auth');
+// Route::resource('dashboard/biodata', DashboardBioController::class)->middleware('auth');
+Route::resource('dashboard/latihan', DashboardModuleController::class)->middleware('auth');
 Route::resource('dashboard/laporan', DashboardReportController::class)->middleware('auth');
 
 

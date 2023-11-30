@@ -19,6 +19,20 @@
                   </div>
 
                 <div class="form-floating">
+                    <select name="gender" class="form-select @error('gender') is-invalid
+                    @enderror" required value="{{ old('gender') }}">
+                        <option selected>-- Jenis Kelamin --</option>
+                        <option value="Laki-laki" >Laki-laki</option>
+                        <option value="Perempuan" >Perempuan</option>
+                      </select>
+                    @error('gender')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                  </div>
+
+                <div class="form-floating">
                     <input type="date" name="dob" class="form-control @error('dob') is-invalid @enderror" id="dob" placeholder="Tanggal Lahir" required value="{{ old('dob') }}">
                     <label for="dob">Tanggal Lahir</label>
                     @error('dob')

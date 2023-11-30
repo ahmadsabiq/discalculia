@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\Webgl;
 use Illuminate\Http\Request;
 
-class DashboardWebglController extends Controller
+class DashboardModuleController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('dashboard.webgl.index', [
+        return view('dashboard.module.index', [
             "title" => "Webgl",
             "active" => "webgl",
         ]);

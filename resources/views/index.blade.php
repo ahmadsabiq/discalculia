@@ -6,9 +6,18 @@
     <title>Unity WebGL Player | Discalculia Game</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+
+    {{-- Bootstrap CSS --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    {{-- Bootstrap Icons --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    {{-- Custom CSS --}}
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    
+
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
@@ -19,11 +28,12 @@
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
+        <a href="/dashboard/latihan" class="btn btn-success">Kembali ke latihan</a>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">Discalculia Game</div>
       </div>
     </div>
+
     <script>
 
       var container = document.querySelector("#unity-container");

@@ -9,8 +9,11 @@
         <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ $user->name }}">
       </div>
       <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">Jenis Kelamin</label>
+        <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ $user->gender }}">
+      <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Tanggal Lahir</label>
-        <input type="date" id="disabledTextInput" class="form-control" placeholder="{{ $user->dob }}">
+        <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ $user->dob }}">
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Username</label>
         <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ $user->username }}">
@@ -19,14 +22,14 @@
         <label for="disabledTextInput" class="form-label">Email</label>
         <input type="email" id="disabledTextInput" class="form-control" placeholder="{{ $user->email }}">
       </div>
-      <div class="mb-3">
+      {{-- <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Nama Anak</label>
         <input type="text" class="form-control" id="nama" name="nama">
       </div>
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Tanggal Lahir </label>
         <input type="date" class="form-control" id="usia" name="usia">
-      </div>
+      </div> --}}
 
     </fieldset>
   </form>
